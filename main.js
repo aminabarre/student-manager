@@ -117,7 +117,6 @@ studentForm.addEventListener('submit', (e) => {
 
 // ─── MODE MODIFICATION ────────────────────────────────
 function handleEdit(student) {
-  // Remplir le formulaire avec les données de l'étudiant
   editingId = student.id
   firstName.value = student.firstName
   lastName.value = student.lastName
@@ -125,13 +124,11 @@ function handleEdit(student) {
   subject.value = student.subject
   grade.value = student.grade
 
-  // Changer le titre du formulaire
-  formTitle.textContent = 'Modifier l\'étudiant'
-  formIcon.textContent = '✏️'
-  submitBtn.textContent = '💾 Enregistrer'
+  formTitle.textContent = "Modifier l'étudiant"
+  formIcon.textContent = ''
+  submitBtn.textContent = 'Enregistrer'
   cancelBtn.classList.remove('hidden')
 
-  // Scroll vers le formulaire sur mobile
   document.querySelector('.sidebar').scrollIntoView({ behavior: 'smooth' })
 }
 
@@ -142,8 +139,8 @@ function resetForm() {
   editingId = null
   studentForm.reset()
   formTitle.textContent = 'Ajouter un étudiant'
-  formIcon.textContent = '➕'
-  submitBtn.textContent = '➕ Ajouter'
+  formIcon.textContent = ''
+  submitBtn.textContent = 'Ajouter'
   cancelBtn.classList.add('hidden')
 }
 

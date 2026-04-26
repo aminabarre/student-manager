@@ -38,10 +38,11 @@
 
     <!-- SIDEBAR : Formulaire -->
     <aside class="sidebar">
-      <div class="form-title">
-        <span id="formIcon">➕</span>
-        <span id="formTitle">Ajouter un étudiant</span>
-      </div>
+     <!-- Formulaire title -->
+     <div class="form-title">
+     <span id="formIcon"></span>
+     <span id="formTitle">Ajouter un étudiant</span>
+     </div>
 
       <form id="studentForm" class="student-form">
         <input type="hidden" id="studentId">
@@ -79,10 +80,11 @@
           <input type="number" id="grade" placeholder="Ex: 16" min="0" max="20" required>
         </div>
 
-        <div class="form-buttons">
-          <button type="submit" id="submitBtn" class="btn-primary">➕ Ajouter</button>
-          <button type="button" id="cancelBtn" class="btn-secondary hidden">✕ Annuler</button>
-        </div>
+        <!-- Boutons formulaire -->
+     <div class="form-buttons">
+      <button type="submit" id="submitBtn" class="btn-primary">Ajouter</button>
+     <button type="button" id="cancelBtn" class="btn-secondary hidden">Annuler</button>
+     </div>    
       </form>
     </aside>
 
@@ -91,10 +93,12 @@
 
       <!-- Barre de recherche et filtres -->
       <div class="toolbar">
-        <div class="search-box">
-          <span class="search-icon">🔍</span>
-          <input type="text" id="searchInput" placeholder="Rechercher un étudiant...">
-        </div>
+        <!-- Recherche -->
+    <div class="search-box">
+     <span class="search-icon">&#9900;</span>
+     <input type="text" id="searchInput" placeholder="Rechercher un étudiant...">
+     </div>
+
         <div class="filters">
           <select id="subjectFilter">
             <option value="">Toutes les matières</option>
@@ -117,17 +121,17 @@
       <!-- Résultats -->
       <div class="results-info">
         <span id="resultsCount">0 étudiant(s)</span>
-        <button id="clearAllBtn" class="btn-danger-outline">🗑 Tout supprimer</button>
+        <button id="clearAllBtn" class="btn-danger-outline">Tout supprimer</button>
       </div>
 
       <!-- Liste -->
-      <div id="studentGrid" class="student-grid">
-        <div class="empty-state">
-          <div class="empty-icon">👨‍🎓</div>
-          <div class="empty-title">Aucun étudiant</div>
-          <div class="empty-sub">Ajoute ton premier étudiant avec le formulaire</div>
-        </div>
-      </div>
+     <!-- Empty state -->
+<div id="studentGrid" class="student-grid">
+  <div class="empty-state">
+    <div class="empty-title">Aucun étudiant</div>
+    <div class="empty-sub">Ajoute ton premier étudiant avec le formulaire</div>
+  </div>
+</div>
 
       <!-- Pagination -->
       <div id="pagination" class="pagination hidden"></div>
@@ -138,7 +142,7 @@
   <!-- MODAL de confirmation -->
   <div id="modal" class="modal hidden">
     <div class="modal-box">
-      <div class="modal-icon">⚠️</div>
+     <div class="modal-icon">!</div>
       <div class="modal-title">Confirmer la suppression</div>
       <div class="modal-text">Cette action est irréversible.</div>
       <div class="modal-buttons">

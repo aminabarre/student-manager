@@ -21,22 +21,22 @@ export function createStudentCard(student, onEdit, onDelete) {
   card.classList.add('student-card')
   card.dataset.id = id
 
-  card.innerHTML = `
-    <div class="card-header">
-      <div class="card-avatar">${getInitials(firstName, lastName)}</div>
-      <div class="card-info">
-        <div class="card-name">${firstName} ${lastName}</div>
-        <div class="card-email">${email}</div>
-      </div>
+card.innerHTML = `
+  <div class="card-header">
+    <div class="card-avatar">${getInitials(firstName, lastName)}</div>
+    <div class="card-info">
+      <div class="card-name">${firstName} ${lastName}</div>
+      <div class="card-email">${email}</div>
     </div>
-    <div class="card-body">
-      <span class="card-subject">${subject}</span>
-      <span class="card-grade ${getGradeClass(grade)}">${grade}/20</span>
-    </div>
-    <div class="card-footer">
-      <button class="card-btn edit" data-id="${id}">✏️ Modifier</button>
-      <button class="card-btn delete" data-id="${id}">🗑 Supprimer</button>
-    </div>
+  </div>
+  <div class="card-body">
+    <span class="card-subject">${subject}</span>
+    <span class="card-grade ${getGradeClass(grade)}">${grade}/20</span>
+  </div>
+  <div class="card-footer">
+    <button class="card-btn edit" data-id="${id}">Modifier</button>
+    <button class="card-btn delete" data-id="${id}">Supprimer</button>
+  </div>
   `
 
   // addEventListener sur les boutons
@@ -50,7 +50,6 @@ export function createStudentCard(student, onEdit, onDelete) {
 export function showEmptyState(grid) {
   grid.innerHTML = `
     <div class="empty-state">
-      <div class="empty-icon">👨‍🎓</div>
       <div class="empty-title">Aucun étudiant trouvé</div>
       <div class="empty-sub">Essaie une autre recherche ou ajoute un étudiant</div>
     </div>
